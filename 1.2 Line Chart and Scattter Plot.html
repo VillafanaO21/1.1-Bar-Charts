@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+<canvas id="myChart"></canvas>
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            datasets: [{
+                data: [86, 71, 13, 45, 21, 69, 85, 72, 95, 10, 15, 20],
+                label: 'Candy',
+                borderColor: 'rgba(120, 120, 255, 1)'
+            }, {
+                data: [100, 21, 113, 0, 89, 21, 73, 69, 95, 23, 64, 72],
+                label: 'Cloths',
+                borderColor: 'rgba(225, 100, 255, 1)'
+            }, {
+                data: [0, 21, 35, 12, 225, 100, 255, 1, 12, 15, 33, 22],
+                label: 'Amazon',
+                borderColor: 'rgba(100, 200, 100, 1)'
+            }, {
+                data: [90, 35, 100, 10, 1, 33, 234, 400, 39, 84, 21, 45],
+                label: 'Movies',
+                borderColor: 'rgba(150, 290, 121, 1)'
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Monthly Spending'
+                },
+                legends: {
+                    position: 'left'
+                }
+            }
+        }
+    });
+</script>
+<canvas id="chart2"></canvas>
+<script>
+    var cty = document.getElementById('chart2');
+    var nextChart = new Chart(cty, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Dataset1',
+                pointBackgroundColor: 'rgba(233, 200, 50, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 7, y: 10},
+                    {x: 11, y: 25},
+                    {x: 15, y: 15}
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                xAxis: {
+                    beginAtZero: true
+                },
+                yAxis: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Sales'
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
