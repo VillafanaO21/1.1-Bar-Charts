@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+<div style='width: 400px'>
+    <canvas id="myChart"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Mexico', 'Puerto Rico', 'Pakistan', 'Paraguay', 'Qatar', 'Romania','Russia', 'Ukraine','UK','US'],
+            datasets: [{
+                label: 'Disaster Deaths 20/20',
+                data: [82/45, 116/5, 630/231, 40/0, 0/0,0/3, 59/31, 19/0, 4043/2558, 6000/253 ],
+                backgroundColor: [
+                    'rgb(255,99,150)',
+                    'rgb(141,85,14)',
+                    'rgb(114,1,114)',
+                    'rgb(53,88,085)',
+                    'rgb(143,67,243)',
+                    'rgb(56,91,453)',
+
+                ],
+                hoverOffset: 1
+            }]
+        }
+    });
+</script>
