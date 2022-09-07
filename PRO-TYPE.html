@@ -116,5 +116,80 @@
         }
     });
 </script>
+<canvas id="myChart2"></canvas>
+<script>
+    var cty = document.getElementById('myChart2');
+    var myChart2 = new Chart(cty, {
+        type: 'line',
+        data: {
+            labels: ['GERMANY', 'MEXICO', 'U.K', 'U.S', 'Puerto Rico', 'Pakistan', 'Paraguay','Oman','Norway','North Korea', 'Nigeria', 'New Zealand', 'North America', 'Nicaragua', 'Panama', 'North Macedonia', 'Oceania', 'Oman', 'Palestine', 'Palau', 'Saudi Arabia', 'Slovakia', 'Seychellas', 'Senegal', 'Samoa', 'Togo', 'Turkey', 'Thailand', 'Timor', 'Tanzania', 'Upper Middle Income'],
+            datasets: [{
+                data: [16, 126, 403, 781, 12, 763, 7, 11, 7, 112, 43, 21, 23043, 200, 4, 0, 94, 11, 1, 16, 13, 1, 4, 26, 2, 640, 155, 1, 24, 9329],
+                label: 'Global',
+                borderColor: 'rgba(120, 120, 255, 1)'
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Global Deaths'
+                },
+                legends: {
+                    position: 'left'
+                }
+            }
+        }
+    });
+</script>
+<div style='width: 400px'>
+    <canvas id="myChart3"></canvas>
+</div>
+<script>
+    var ctz = document.getElementById('myChart3');
+    var myChart3 = new Chart(ctz, {
+        type: 'doughnut',
+        data: {
+            labels: ['GERMANY', 'MEXICO', 'U.K', 'U.S', 'Puerto Rico', 'Pakistan', 'Paraguay','Oman','Norway','North Korea', 'Nigeria', 'New Zealand', 'North America', 'Nicaragua', 'Panama', 'North Macedonia', 'Oceania', 'Oman', 'Palestine', 'Palau', 'Saudi Arabia', 'Slovakia', 'Seychellas', 'Senegal', 'Samoa', 'Togo', 'Turkey', 'Thailand', 'Timor', 'Tanzania', 'Upper Middle Income'],
+            datasets: [{
+                label: 'Natural Disasters Death',
+                data: [16, 126, 403, 781, 12, 763, 7, 11, 7, 112, 43, 21, 23043, 200, 4, 0, 94, 11, 1, 16, 13, 1, 4, 26, 2, 640, 155, 1, 24, 9329],
+                backgroundColor: [
+                    'rgba(16,213,122,0.2)',
+                    'rgba(189,23,23,0.2)',
+                    'rgba(0, 0, 255, 0.2)',
+                    'rgba(225,211,21,0.2)',
+                    'rgba(25,230,65,0.4)',
+                    'rgba(200,30,15,0.5)',
+                    'rgba(7, 10, 300, 0.10)',
+                    'rgba(25,230,65,0.4)',
+                    'rgba(200,30,15,0.5)',
+                    'rgba(5, 10, 300, 0.10)',
+                    'rgba(200,30,15,0.5)',
+                    'rgba(5, 10, 300, 0.10)',
+                    'rgba(25,230,65,0.4)',
+                    'rgba(200,30,15,0.5)',
+                    'rgba(5, 10, 300, 0.10)',
+                    'rgba(16,213,122,0.2)',
+                    'rgba(189,23,23,0.2)',
+                    'rgba(0, 0, 255, 0.2)',
+                    'rgba(225,211,21,0.2)',
+                    'rgba(25,230,65,0.4)',
+                    'rgba(200,30,15,0.5)',
+                    'rgba(5, 10, 300, 0.10)',
+                    'rgba(25,230,65,0.4)',
+                    'rgba(200,30,15,0.5)',
+                    'rgba(5, 10, 300, 0.10)',
+                    'rgba(200,30,15,0.5)',
+                    'rgba(5, 10, 300, 0.10)',
+                    'rgba(25,230,65,0.4)',
+                    'rgba(200,30,15,0.5)',
+                    'rgba(5, 10, 300, 0.10)',
+                ],
+                hoverOffset: 1
+            }]
+        }
+    });
+</script>
 </body>
 </html>
